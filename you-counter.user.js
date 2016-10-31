@@ -6,8 +6,9 @@
 // @version       1.4
 // ==/UserScript==
 
-/*
- * Copyright (c) 2016 prussian <genunrest@gmail.com>
+/* Copyright (c) 2016 prussian 
+ * prussian <genunrest@gmail.com>
+ * joe_dirt <anon6000@cock.li>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
