@@ -28,13 +28,17 @@
  */
 
 
+var originalTitle
+
 var getYous = () => {
     var yous = [].slice.call(
         document.getElementsByTagName('a')
     ).filter((currentValue) => { 
         return currentValue.innerHTML.search('(You)') > -1
     }).length
-    document.title = `(You)'s ${yous} :: ${document.title}`
+    
+    if (!originalTitle) originalTitle = document.title
+    document.title = `(You)'s ${yous} :: ${originalTitle}`
 }
 
 document.addEventListener('4chanThreadUpdated', () => {
