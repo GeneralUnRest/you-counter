@@ -3,7 +3,7 @@
 // @namespace     http://github.com/GeneralUnRest/you-counter
 // @description   goes through posts and finds those containing a (You), tallys them up and displays them
 // @include       http*://boards.4chan.org/*/thread/*
-// @version       1.3
+// @version       1.4
 // ==/UserScript==
 
 /*
@@ -29,15 +29,9 @@
 
 
 var getYous = () => {
-    var thread = window.location.pathname.split('/')[3]
-    var posts = [].slice.call(document.getElementById(`t${thread}`).getElementsByClassName('qoutelink'))
-    var yous = posts.filter((post) => {
-        return post.innerHTML.indexOf('(You)') != -1
-    }).length
-
+    var yous = document.getElementsByClassName('you').length
     document.title = `(You)'s ${yous} :: ${document.title}`
 }
-
 
 document.addEventListener('4chanThreadUpdated', () => {
     getYous()
